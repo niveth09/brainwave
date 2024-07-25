@@ -1,0 +1,107 @@
+<div class="container">
+  <p class="h4 text-center">Create Profile</p>
+  <form
+    [formGroup]="contactForm"
+    class="row justify-content-center border rounded-3 p-3"
+  >
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        aria-describedby=""
+        formControlName="firstName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        formControlName="lastName"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="emailID" class="form-label">Email ID</label>
+      <input
+        type="email"
+        class="form-control"
+        id="emailID"
+        aria-describedby="emailHelp"
+        formControlName="emailID"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input
+        type="number"
+        class="form-control"
+        id="age"
+        formControlName="age"
+      />
+    </div>
+    <div class="mb-3 w-100">
+      <label for="gender" class="form-label">Gender</label>
+      <div class="dropdown w-100">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="gender"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Select the Gender
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="gender">
+          <li><a class="dropdown-item active" href="#">Female</a></li>
+          <li><a class="dropdown-item" href="#">Male</a></li>
+          <li><a class="dropdown-item" href="#">Transgender</a></li>
+          <li><a class="dropdown-item" href="#">Other</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="mobileNumber" class="form-label">Mobile Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="mobileNumber"
+        formControlName="mobileNumber"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="panNumber" class="form-label">Pan Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="panNumber"
+        formControlName="panNumber"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="aadharNumber" class="form-label">Aadhar Number</label>
+      <input
+        type="text"
+        class="form-control"
+        id="aadharNumber"
+        formControlName="aadharNumber"
+      />
+    </div>
+
+    <div class="w-100 d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg btn-block"
+        (click)="onSubmitContact()"
+      >
+        Create Profile
+      </button>
+    </div>
+  </form>
+</div>
